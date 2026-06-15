@@ -56,9 +56,9 @@ This document converts the Observations Gap Analysis, current-state Observations
 
 | Dependency | Impact |
 |---|---|
-| Incident Management | Hazard ID may be surfaced under Incident Management or a consolidated HSE navigation context while remaining technically in Observations. This affects menu structure, permissions, and user guidance. |
-| NCR / Quality Application | Quality Observation is expected to move out of Observations, but the target Quality intake design is outside this Observations task list and must be confirmed separately. |
-| Action Plans / Event Action Plans | Responsible users must be able to create related Event Action Plan records in Draft, Review, and Closed. Permissions and related-record configuration must be validated across the workflow. |
+| EHS Incident Management | Hazard ID may be surfaced under Incident Management or a consolidated HSE navigation context while remaining technically in Observations. This affects menu structure, permissions, and user guidance. |
+| Nonconformance / CAR | Quality Observation is expected to move out of Observations, but the target Quality intake design is outside this Observations task list and must be confirmed separately. |
+| Action Plans | Responsible users must be able to create related Event Action Plan records in Draft, Review, and Closed. Permissions and related-record configuration must be validated across the workflow. |
 | Employee / Supervisor Hierarchy | Overdue escalation notifications depend on a confirmed source for the responsible user’s immediate supervisor. |
 | Mobile Profiles | Mobile Hazard ID and Work Observation views must be updated alongside desktop navigation, workflow, picklist, and security changes. |
 | Security Groups | `HSE Manager` must exist or be created before Review-stage assignment, workflow actions, and notification recipients can be fully configured. |
@@ -70,8 +70,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 | OQ-001 | What are the final approved user-facing definitions for Hazard ID, Near Miss, and Incident? | Required before finalizing Hazard ID intake guidance. |
 | OQ-002 | Should Hazard ID remain visible under Observations, move visually under Incident Management, or appear in both places? | Required before finalizing navigation and cross-application access. |
 | OQ-003 | Should the Quality Observation object be hidden, retired, preserved read-only, or repurposed? | Required before finalizing legacy Quality Observation view and security behavior. |
-| OQ-004 | Which Hazard ID fields constitute the “main detail section” that must be completed in Draft? | Required before configuring Draft requiredness and submit validation. |
-| OQ-005 | Should the existing `Reviewer Comments` field be reused for rejection comments, or should a new `Review Comments` field be created? | Required before configuring rejection requiredness and returned-Draft display. |
+| OQ-004 | Should the existing `Reviewer Comments` field be reused for rejection comments, or should a new `Review Comments` field be created? | Required before configuring rejection requiredness and returned-Draft display. |
 | OQ-006 | Should the HSE Manager be assigned as a named user, role queue, group, or dynamically derived responsible party? | Required before configuring Review-stage responsibility and notifications. |
 | OQ-007 | What is the approved source for the responsible user’s immediate supervisor? | Required before configuring escalation notifications. |
 | OQ-008 | If Review is assigned to the `HSE Manager` role rather than a named user, whose supervisor should receive escalation emails? | Required before supervisor escalation logic can be completed. |
