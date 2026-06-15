@@ -1,0 +1,107 @@
+[
+  {
+    "num": "TASK-OBS-001",
+    "name": "Retire Active Quality Observation Intake from Observations",
+    "app": "Observations",
+    "theme": "Cleanup, Decommissioning, and Legacy Quality Observation Handling",
+    "file": "tasks/TASK-OBS-001_Retire_Active_Quality_Observation_Intake_from_Observations.md"
+  },
+  {
+    "num": "TASK-OBS-002",
+    "name": "Convert Quality Observation Views to Historical / Read-Only Access Where Required",
+    "app": "Observations",
+    "theme": "Cleanup, Decommissioning, and Legacy Quality Observation Handling",
+    "file": "tasks/TASK-OBS-002_Convert_Quality_Observation_Views_to_Historical_Read_Only_Access_Where_Required.md"
+  },
+  {
+    "num": "TASK-OBS-003",
+    "name": "Deactivate `Quality` from Active Safe/Unsafe/Quality Classification Use",
+    "app": "Observations",
+    "theme": "Data Model and Lookup Configuration",
+    "file": "tasks/TASK-OBS-003_Deactivate_Quality_from_Active_Safe_Unsafe_Quality_Classification_Use.md"
+  },
+  {
+    "num": "TASK-OBS-004",
+    "name": "Export and Document Current Hazard ID Lookup Values for Harmonization",
+    "app": "Observations",
+    "theme": "Data Model and Lookup Configuration",
+    "file": "tasks/TASK-OBS-004_Export_and_Document_Current_Hazard_ID_Lookup_Values_for_Harmonization.md"
+  },
+  {
+    "num": "TASK-OBS-005",
+    "name": "Implement Approved Hazard ID Lookup Harmonization",
+    "app": "Observations",
+    "theme": "Data Model and Lookup Configuration",
+    "file": "tasks/TASK-OBS-005_Implement_Approved_Hazard_ID_Lookup_Harmonization.md"
+  },
+  {
+    "num": "TASK-OBS-006",
+    "name": "Add Hazard / Near Miss / Incident Definition Guidance to Hazard ID Intake",
+    "app": "Observations",
+    "theme": "Form Layout and User Experience",
+    "file": "tasks/TASK-OBS-006_Add_Hazard_Near_Miss_Incident_Definition_Guidance_to_Hazard_ID_Intake.md"
+  },
+  {
+    "num": "TASK-OBS-010",
+    "name": "Configure Hazard ID Navigation Under Approved HSE / Incident Management Context",
+    "app": "Observations",
+    "theme": "Navigation and Cross-Application UX",
+    "file": "tasks/TASK-OBS-010_Configure_Hazard_ID_Navigation_Under_Approved_HSE_Incident_Management_Context.md"
+  },
+  {
+    "num": "TASK-INC-001",
+    "name": "Add Hazard ID Entry Point to Incident Management HSE Navigation",
+    "app": "Incident Management",
+    "theme": "Cross-Application User Experience",
+    "file": "tasks/TASK-INC-001_Add_Hazard_ID_Entry_Point_to_Incident_Management_HSE_Navigation.md"
+  },
+  {
+    "num": "TASK-OBS-011",
+    "name": "Redesign Observations Security Groups for HSE Ownership Model",
+    "app": "Observations",
+    "theme": "Security, Roles, and Permissions",
+    "file": "tasks/TASK-OBS-011_Redesign_Observations_Security_Groups_for_HSE_Ownership_Model.md"
+  },
+  {
+    "num": "TASK-OBS-012",
+    "name": "Secure Historical Quality Observation Access Separately from HSE Hazard ID Access",
+    "app": "Observations",
+    "theme": "Security, Roles, and Permissions",
+    "file": "tasks/TASK-OBS-012_Secure_Historical_Quality_Observation_Access_Separately_from_HSE_Hazard_ID_Access.md"
+  },
+  {
+    "num": "TASK-OBS-016",
+    "name": "Update Mobile Observations Experience for HSE-Only Intake",
+    "app": "Observations",
+    "theme": "Mobile or Offline Behavior",
+    "file": "tasks/TASK-OBS-016_Update_Mobile_Observations_Experience_for_HSE_Only_Intake.md"
+  },
+  {
+    "num": "TASK-OBS-017",
+    "name": "Configure Hazard ID Draft Workflow Stage",
+    "app": "Observations",
+    "theme": "Workflow and Status Logic",
+    "file": "tasks/TASK-OBS-017_Configure_Hazard_ID_Draft_Workflow_Stage.md"
+  },
+  {
+    "num": "TASK-OBS-018",
+    "name": "Configure Hazard ID Review Workflow Stage",
+    "app": "Observations",
+    "theme": "Workflow and Status Logic",
+    "file": "tasks/TASK-OBS-018_Configure_Hazard_ID_Review_Workflow_Stage.md"
+  },
+  {
+    "num": "TASK-OBS-019",
+    "name": "Configure Hazard ID Closed Workflow Stage",
+    "app": "Observations",
+    "theme": "Workflow and Status Logic",
+    "file": "tasks/TASK-OBS-019_Configure_Hazard_ID_Closed_Workflow_Stage.md"
+  },
+  {
+    "num": "TASK-OBS-020",
+    "name": "Configure Hazard ID Workflow Due Date Reminder and Escalation Notifications",
+    "app": "Observations",
+    "theme": "Notifications and Email Templates",
+    "file": "tasks/TASK-OBS-020_Configure_Hazard_ID_Workflow_Due_Date_Reminder_and_Escalation_Notifications.md"
+  }
+]
