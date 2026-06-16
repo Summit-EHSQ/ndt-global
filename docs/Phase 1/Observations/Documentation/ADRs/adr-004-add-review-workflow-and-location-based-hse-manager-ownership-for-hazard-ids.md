@@ -17,15 +17,15 @@ informed:
   - Branka Vidovic
 ---
 
-# ADR-004: Add Review Workflow and Location-Based HSE Manager Ownership for Hazard IDs
+## ADR-004: Add Review Workflow and Location-Based HSE Manager Ownership for Hazard IDs
 
-## Context and Problem Statement
+### Context and Problem Statement
 
 The out-of-the-box observation model was described as primarily a data capture mechanism without a strong review workflow. NDT’s current process expects submitted observations to be reviewed by the relevant HSE manager before they are visible or processed more broadly and before actions are assigned.
 
 The existing Integra configuration includes review-related fields, but the meeting suggested that the process should be more explicitly represented as workflow.
 
-## Decision Drivers
+### Decision Drivers
 
 - HSE needs quality control over incoming hazard submissions.
 - Submitted records should have clear ownership.
@@ -33,7 +33,7 @@ The existing Integra configuration includes review-related fields, but the meeti
 - The process should support location-based responsibility.
 - Multiple possible reviewers may exist for a location.
 
-## Considered Options
+### Considered Options
 
 1. **No formal review workflow**
    - Simpler configuration.
@@ -50,11 +50,11 @@ The existing Integra configuration includes review-related fields, but the meeti
    - Provides review and action assignment control.
    - Requires role mapping by location.
 
-## Decision Outcome
+### Decision Outcome
 
 Add a review workflow for Hazard ID records. Submitted records should route to the HSE manager role associated with the relevant location. The reviewer validates the submission and assigns follow-up actions as needed. Where multiple HSE managers are assigned, the process may allow the first available reviewer to take action.
 
-## Consequences
+### Consequences
 
 - Hazard ID requires workflow configuration beyond simple record capture.
 - A location-based HSE manager role must be maintained.
@@ -62,7 +62,7 @@ Add a review workflow for Hazard ID records. Submitted records should route to t
 - Records will have clearer status and ownership.
 - The process better supports governance but adds configuration complexity.
 
-## More Information
+### More Information
 
 The review model was demonstrated using a configured workflow example. The group indicated that this model better matched the desired process than the current simple submission model.
 

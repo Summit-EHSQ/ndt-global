@@ -1,4 +1,4 @@
-# TASK-OBS-004: Export and Document Current Hazard ID Lookup Values for Harmonization
+## TASK-OBS-004: Export and Document Current Hazard ID Lookup Values for Harmonization
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Data Model and Lookup Configuration |
 | Task Number | TASK-OBS-004 |
 
-## Task Name
+### Task Name
 
 Export and Document Current Hazard ID Lookup Values for Harmonization
 
-## Task Description
+### Task Description
 
 Prepare the Hazard ID taxonomy for NDT / Integra harmonization before any lookup value changes are made.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Export current values for `Hazard Type`, `Observation Area`, `Severity`, `Steps Taken`, `Safe/Unsafe`, and any Hazard ID-related lookup fields.
 - Include current value name, internal identifier/key if available, active/inactive status, sort order, color or severity formatting where applicable, and count of historical records using each value if query access is available.
@@ -23,7 +23,7 @@ Prepare the Hazard ID taxonomy for NDT / Integra harmonization before any lookup
 - Do not implement recaptioning or deletion during this task.
 - Flag values used by reports, filters, action handlers, or mobile views.
 
-## Unit Tests
+### Unit Tests
 
 - Confirm each exported lookup list matches the values visible in the admin/configuration UI.
 - Confirm at least one sample Hazard ID record using each high-use value still opens successfully.
@@ -31,14 +31,14 @@ Prepare the Hazard ID taxonomy for NDT / Integra harmonization before any lookup
 - Confirm values used in reports or filters are flagged in the decision matrix.
 - Confirm no lookup values are changed, hidden, or deleted as part of this task.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 GAP-006; REQ-008
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Administrative Configuration / Master Data / Reporting Impact Analysis
 
-## Dependencies / Sequencing Notes
+### Dependencies / Sequencing Notes
 
 Must be completed before `TASK-OBS-005`.

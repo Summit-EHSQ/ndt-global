@@ -1,4 +1,4 @@
-# TASK-OBS-002: Convert Quality Observation Views to Historical / Read-Only Access Where Required
+## TASK-OBS-002: Convert Quality Observation Views to Historical / Read-Only Access Where Required
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Cleanup, Decommissioning, and Legacy Quality Observation Handling |
 | Task Number | TASK-OBS-002 |
 
-## Task Name
+### Task Name
 
 Convert Quality Observation Views to Historical / Read-Only Access Where Required
 
-## Task Description
+### Task Description
 
 Update Quality Observation list and detail views so they support historical reference but do not encourage new Quality intake through Observations.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Rename relevant Quality Observation inventory views, where appropriate, to include a legacy indicator such as `Legacy Quality Observations` or equivalent approved label.
 - Remove create/add buttons from Quality Observation inventory views for non-admin roles.
@@ -24,7 +24,7 @@ Update Quality Observation list and detail views so they support historical refe
 - Hide or remove mobile add access for Quality Observation if present.
 - Keep admin/support access available for troubleshooting, audit, and data correction if approved.
 
-## Unit Tests
+### Unit Tests
 
 - Open the Quality Observation inventory as a reporter and confirm no new-record action is available.
 - Open an existing Quality Observation as a reporter and confirm fields are read-only if read-only historical access is required.
@@ -33,14 +33,14 @@ Update Quality Observation list and detail views so they support historical refe
 - Confirm mobile navigation does not provide a Quality Observation add path for standard users.
 - Confirm historical attachments or related Action Plan links remain visible where they existed before.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 GAP-001; OQ-003
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Views / Forms / Mobile / Security
 
-## Dependencies / Sequencing Notes
+### Dependencies / Sequencing Notes
 
 Depends on `TASK-OBS-001` and the final decision for whether Quality Observation is hidden, retired, read-only, or repurposed.

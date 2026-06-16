@@ -1,4 +1,4 @@
-# TASK-OBS-017: Configure Hazard ID Draft Workflow Stage
+## TASK-OBS-017: Configure Hazard ID Draft Workflow Stage
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Workflow and Status Logic |
 | Task Number | TASK-OBS-017 |
 
-## Task Name
+### Task Name
 
 Configure Hazard ID Draft Workflow Stage
 
-## Task Description
+### Task Description
 
 Configure `Draft` as the initial Hazard ID workflow stage. The Draft stage is owned by the creating user and is due three calendar days after initial record creation. In this stage, the creator is responsible for completing the main detail section of the Hazard ID form. If the record is rejected from Review and returned to Draft, the HSE Manager’s review comments must be displayed prominently to the creator. Responsible users must be able to create related Event Action Plan records while the Hazard ID is in Draft.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Enable or confirm workflow is enabled on the Hazard ID object.
 - Create or configure `Draft` as the initial workflow stage for new Hazard ID records.
@@ -31,7 +31,7 @@ Configure `Draft` as the initial Hazard ID workflow stage. The Draft stage is ow
 - Allow the responsible Draft-stage user to create related Event Action Plan records.
 - Confirm creator access to existing related Action Plan / Event Action Plan sections from the Draft form.
 
-## Unit Tests
+### Unit Tests
 
 - Create a new Hazard ID as a standard reporter and confirm it enters `Draft`.
 - Confirm the Draft responsible user is the creating user.
@@ -45,11 +45,11 @@ Configure `Draft` as the initial Hazard ID workflow stage. The Draft stage is ow
 - Confirm the Draft responsible user can create a related Event Action Plan record.
 - Confirm unauthorized users cannot edit another creator’s Draft record unless their role allows it.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 Updated user workflow requirement; Hazard ID two-stage workflow
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Workflow / Form Behavior / Required Fields / Assignment / Due Dates / Action Plans / Security
 

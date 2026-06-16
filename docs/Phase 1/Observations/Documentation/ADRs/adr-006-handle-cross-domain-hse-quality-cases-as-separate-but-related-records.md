@@ -16,15 +16,15 @@ informed:
   - Branka Vidovic
 ---
 
-# ADR-006: Handle Cross-Domain HSE/Quality Cases as Separate but Related Records
+## ADR-006: Handle Cross-Domain HSE/Quality Cases as Separate but Related Records
 
-## Context and Problem Statement
+### Context and Problem Statement
 
 Some events may involve both HSE and Quality aspects. An HSE near miss or incident may reveal an underlying quality or engineering non-conformance. The system needs a way to preserve the relationship between these processes without over-engineering integration for rare scenarios.
 
 The discussion identified that such cases are important but likely infrequent.
 
-## Decision Drivers
+### Decision Drivers
 
 - HSE and Quality processes should remain distinct because they have different ownership and treatment paths.
 - Some investigations need to reference or trigger work in the other domain.
@@ -32,7 +32,7 @@ The discussion identified that such cases are important but likely infrequent.
 - The system should not prevent users from associating related records.
 - Configuration effort should be proportional to expected usage.
 
-## Considered Options
+### Considered Options
 
 1. **No relationship between HSE and Quality records**
    - Simplest configuration.
@@ -53,20 +53,20 @@ The discussion identified that such cases are important but likely infrequent.
    - Adds significant complexity.
    - Not justified based on expected frequency.
 
-## Decision Outcome
+### Decision Outcome
 
 Handle cross-domain HSE/Quality cases as separate but related records by default. When an HSE investigation identifies a Quality issue, an action can be assigned to create or manage the related NCR. The originating HSE record may remain open until the related Quality process reaches an appropriate point, depending on investigator judgment.
 
 Direct system-enforced linkage or automated NCR creation should not be implemented unless future analysis shows that cross-domain cases are frequent enough to justify the effort.
 
-## Consequences
+### Consequences
 
 - The solution supports rare but significant cross-domain cases without excessive complexity.
 - Investigators must understand how to create and track related records.
 - Manual traceability may be weaker than a direct object relationship.
 - If cross-domain cases become common, a future enhancement may add direct record relationships or completion dependencies.
 
-## More Information
+### More Information
 
 A direct relationship model was discussed as technically feasible, including pre-population and workflow blocking, but was not recommended unless the relationship occurs frequently enough to justify the investment.
 

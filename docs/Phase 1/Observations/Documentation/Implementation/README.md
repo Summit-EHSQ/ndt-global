@@ -1,6 +1,6 @@
-# Intelex Technical Development Task List
+## Intelex Technical Development Task List
 
-## 1. Document Control Information
+### 1. Document Control Information
 
 | Field | Value |
 |---|---|
@@ -11,11 +11,11 @@
 | Prepared By |  |
 | Date | 2026-06-15 |
 
-## 2. Purpose
+### 2. Purpose
 
 This document converts the Observations Gap Analysis, current-state Observations `.ipack` review, and subsequent implementation decisions into an executable Intelex technical development task package. The solution focuses on refining the Observations application so Hazard ID becomes the active HSE observation pathway, Quality Observation is removed from active Observations intake, Hazard ID receives a new stage-based workflow, and workflow reminder/escalation notifications are configured.
 
-## 3. Assumptions and Scope Notes
+### 3. Assumptions and Scope Notes
 
 - The uploaded `.ipack` package represents the baseline current-state Observations configuration.
 - The current-state package includes both `Quality Observation` and `Hazard ID`, but the future-state direction is to remove Quality Observation from active Observations intake and retain Hazard ID as the active HSE observation concept.
@@ -32,7 +32,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 - The source for a responsible user’s immediate supervisor must be confirmed before escalation notifications are configured.
 - Removed tasks are intentionally omitted from this package: `TASK-OBS-007`, `TASK-OBS-008`, `TASK-OBS-009`, `TASK-OBS-013`, `TASK-OBS-014`, and `TASK-OBS-015`.
 
-## 4. Technical Development Task Index
+### 4. Technical Development Task Index
 
 | Task Number | Task Name | Application | Theme | Task File |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 | TASK-OBS-019 | Configure Hazard ID Closed Workflow Stage | Observations | Workflow and Status Logic | [Open task](tasks/TASK-OBS-019_Configure_Hazard_ID_Closed_Workflow_Stage.md) |
 | TASK-OBS-020 | Configure Hazard ID Workflow Due Date Reminder and Escalation Notifications | Observations | Notifications and Email Templates | [Open task](tasks/TASK-OBS-020_Configure_Hazard_ID_Workflow_Due_Date_Reminder_and_Escalation_Notifications.md) |
 
-## 5. Cross-Application Dependencies
+### 5. Cross-Application Dependencies
 
 | Dependency | Impact |
 |---|---|
@@ -63,7 +63,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 | Mobile Profiles | Mobile Hazard ID and Work Observation views must be updated alongside desktop navigation, workflow, picklist, and security changes. |
 | Security Groups | `HSE Manager` must exist or be created before Review-stage assignment, workflow actions, and notification recipients can be fully configured. |
 
-## 6. Open Questions for Build Planning
+### 6. Open Questions for Build Planning
 
 | ID | Open Question | Build Impact |
 |---|---|---|
@@ -79,7 +79,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 | OQ-011 | Which Hazard ID picklist values should be added, hidden, retained, or recaptioned? | Required before implementing lookup harmonization. |
 | OQ-012 | Should reminder and escalation recurrence use calendar days or business days? | User requirement states calendar days; confirm no exception is required for weekends/holidays. |
 
-## 7. Suggested Build Sequencing
+### 7. Suggested Build Sequencing
 
 1. Confirm unresolved architecture and configuration decisions: Quality Observation retirement model, Hazard ID navigation location, HSE Manager role model, supervisor hierarchy source, review comment field decision, and Event Action Plan behavior in Closed.
 2. Complete `TASK-OBS-004` lookup export and harmonization decision matrix.
@@ -94,7 +94,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 11. Configure workflow reminder and escalation notifications through `TASK-OBS-020`.
 12. Perform end-to-end regression testing across Hazard ID creation, due dates, approval/closure, rejection comments, Event Action Plan creation, security, mobile, email notifications, and historical Quality Observation access.
 
-## 8. Configuration Items That Appear Already Satisfied
+### 8. Configuration Items That Appear Already Satisfied
 
 | Item | Current-State Note |
 |---|---|
@@ -106,7 +106,7 @@ This document converts the Observations Gap Analysis, current-state Observations
 | Mobile view profiles | Mobile configuration exists and can be modified rather than built from scratch. |
 | Date validation | Existing validation prevents future-dated Observations/Hazard ID dates and should be preserved unless future design changes require otherwise. |
 
-## 9. Out-of-Scope or Deferred Items
+### 9. Out-of-Scope or Deferred Items
 
 - Building the future Quality/NCR intake path is out of scope for this Observations-only task list.
 - Migrating historical Quality Observation records is out of scope unless a separate approved data strategy is provided.

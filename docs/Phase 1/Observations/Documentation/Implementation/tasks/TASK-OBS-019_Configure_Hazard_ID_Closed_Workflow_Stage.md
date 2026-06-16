@@ -1,4 +1,4 @@
-# TASK-OBS-019: Configure Hazard ID Closed Workflow Stage
+## TASK-OBS-019: Configure Hazard ID Closed Workflow Stage
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Workflow and Status Logic |
 | Task Number | TASK-OBS-019 |
 
-## Task Name
+### Task Name
 
 Configure Hazard ID Closed Workflow Stage
 
-## Task Description
+### Task Description
 
 Configure the Hazard ID `Closed` stage reached when the HSE Manager approves the record. Closed records should preserve the submitted Hazard ID details, review outcome, review comments if present, and related Event Action Plan records. Responsible or authorized users must be able to create related Event Action Plan records in Closed if post-closure action planning is required.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Create or configure `Closed` as the terminal Hazard ID workflow stage.
 - Configure the `Approve` action from Review to transition the record to Closed.
@@ -27,7 +27,7 @@ Configure the Hazard ID `Closed` stage reached when the HSE Manager approves the
 - Confirm Closed records remain visible in historical/list views and reports.
 - Ensure Closed-stage permissions prevent unauthorized edits to core Hazard ID and review fields.
 
-## Unit Tests
+### Unit Tests
 
 - Approve a Review-stage Hazard ID and confirm it enters `Closed`.
 - Confirm standard users cannot edit core Hazard ID details after closure.
@@ -39,14 +39,14 @@ Configure the Hazard ID `Closed` stage reached when the HSE Manager approves the
 - Confirm Closed records appear in the appropriate Hazard ID inventory/reporting views.
 - Confirm Closed records no longer appear in active Draft or Review work queues unless intentionally included.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 Updated user workflow requirement; Hazard ID approval and closure behavior
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Workflow / Closed-State Form Behavior / Action Plans / Security / Reporting
 
-## Dependencies / Sequencing Notes
+### Dependencies / Sequencing Notes
 
 Depends on `TASK-OBS-018`. Requires decision on whether Action Plans may be created after closure and whether any reopen behavior is required.

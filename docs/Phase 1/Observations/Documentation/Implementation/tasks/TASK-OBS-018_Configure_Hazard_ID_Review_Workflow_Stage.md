@@ -1,4 +1,4 @@
-# TASK-OBS-018: Configure Hazard ID Review Workflow Stage
+## TASK-OBS-018: Configure Hazard ID Review Workflow Stage
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Workflow and Status Logic |
 | Task Number | TASK-OBS-018 |
 
-## Task Name
+### Task Name
 
 Configure Hazard ID Review Workflow Stage
 
-## Task Description
+### Task Description
 
 Configure the Hazard ID `Review` stage assigned to the `HSE Manager` role. The stage is due three calendar days after the record enters Review. In this stage, the HSE Manager reviews the submitted Hazard ID and either approves or rejects it. Approval moves the record to Closed. Rejection returns the record to Draft and requires review comments. Responsible users must be able to create related Event Action Plan records while the Hazard ID is in Review.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Create or configure `Review` as the second Hazard ID workflow stage.
 - Configure Review-stage responsibility to the `HSE Manager` role.
@@ -33,7 +33,7 @@ Configure the Hazard ID `Review` stage assigned to the `HSE Manager` role. The s
 - Allow the responsible Review-stage user to create related Event Action Plan records.
 - Confirm the HSE Manager can access existing related Action Plan / Event Action Plan sections from the Review form.
 
-## Unit Tests
+### Unit Tests
 
 - Submit a Hazard ID from Draft and confirm it enters `Review`.
 - Confirm the Review responsible party is the `HSE Manager` role.
@@ -48,14 +48,14 @@ Configure the Hazard ID `Review` stage assigned to the `HSE Manager` role. The s
 - Confirm non-HSE Manager users cannot approve or reject the Review-stage record.
 - Confirm review comments are not required when approving unless separately configured.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 Updated user workflow requirement; Hazard ID two-stage workflow
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Workflow / Assignment / Due Dates / Review Fields / Action Handlers or Validation / Action Plans / Security
 
-## Dependencies / Sequencing Notes
+### Dependencies / Sequencing Notes
 
 Depends on `TASK-OBS-017`. Requires `HSE Manager` role/group and final decision on reviewer comment field.

@@ -16,15 +16,15 @@ informed:
   - Branka Vidovic
 ---
 
-# ADR-003: Define Hazard, Near Miss, and Incident as Distinct HSE Event Buckets
+## ADR-003: Define Hazard, Near Miss, and Incident as Distinct HSE Event Buckets
 
-## Context and Problem Statement
+### Context and Problem Statement
 
 The HSE reporting model needs clear definitions so that workers know whether to submit a Hazard ID, near miss, or incident. The discussion identified overlap between observations, near misses, and incidents, especially where a condition could have led to harm but did not.
 
 The solution requires practical definitions that can be used in form guidance, training, routing, and reporting.
 
-## Decision Drivers
+### Decision Drivers
 
 - Reduce confusion at the point of submission.
 - Support consistent reporting and analytics.
@@ -32,7 +32,7 @@ The solution requires practical definitions that can be used in form guidance, t
 - Keep the reporting model understandable for frontline users.
 - Preserve different workflows for different kinds of HSE events.
 
-## Considered Options
+### Considered Options
 
 1. **Allow users to choose freely among Hazard ID, near miss, and incident without strong definitions**
    - Reduces upfront design effort.
@@ -48,7 +48,7 @@ The solution requires practical definitions that can be used in form guidance, t
    - Requires review triage and possible reclassification.
    - Was not preferred due to the desire to avoid added review burden.
 
-## Decision Outcome
+### Decision Outcome
 
 Use three distinct HSE reporting buckets:
 
@@ -58,7 +58,7 @@ Use three distinct HSE reporting buckets:
 
 The exact user-facing wording can be refined, but the conceptual model should guide configuration and training.
 
-## Consequences
+### Consequences
 
 - Form captions, help text, and training material should reinforce these distinctions.
 - Hazard ID does not require automatic conversion to incident if definitions are clear.
@@ -66,7 +66,7 @@ The exact user-facing wording can be refined, but the conceptual model should gu
 - Hazard ID remains a related but distinct HSE reporting concept.
 - Edge cases may still require reviewer judgment.
 
-## More Information
+### More Information
 
 The meeting recognized that terminology may need to be adapted for regional and industry-specific usage, but the three-bucket model was accepted as a practical foundation.
 

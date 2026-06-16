@@ -1,6 +1,6 @@
-# Gap Analysis Report
+## Gap Analysis Report
 
-# 1. Engagement Overview
+### 1. Engagement Overview
 
 | Item | Description |
 |---|---|
@@ -16,11 +16,11 @@ This report compares the baseline Observations configuration package against the
 
 The central business driver is enterprise harmonization after integration of two operating models. Integra’s current Observations design uses the application for both Hazard ID and Quality Observation use cases, while the future direction discussed in the workshop favors a clearer separation between HSE and Quality process areas, with Quality-related observations removed from Observations scope and Hazard ID retained as the observation concept for conditions or behaviors that have not yet produced an incident or near miss.
 
-# 2. Current-State Solution Summary
+### 2. Current-State Solution Summary
 
 The uploaded baseline package is `Observations App Config`, version `1.0.0.0`, exported from source owner `EntegraTest` on 2026-06-01 with platform version `6.6.16.2`. The package includes configuration for the Observations module and related dependencies including Action Plans, EHS Incident Management, Event Framework, Fragment Application, System Objects, and WCB Claims Management.
 
-## Current Application Architecture
+#### Current Application Architecture
 
 The current baseline Observations configuration contains the following primary objects:
 
@@ -38,7 +38,7 @@ The current baseline Observations configuration contains the following primary o
 | Hazard Severity / Observation Severity | Severity classification objects. |
 | Action Plan | Related action plan object reference. |
 
-## Workflow Architecture
+#### Workflow Architecture
 
 No published workflow is configured on the main Observations objects in the parsed baseline package. `Quality Observation`, `Hazard ID`, and `Observation` do not show a configured `PublishWorkflowId`. The current model therefore appears primarily form-, view-, lookup-, action-plan-, and validation-driven rather than workflow-stage-driven.
 
@@ -50,7 +50,7 @@ Current validation rules identified in the baseline include:
 | Hazard ID | Date & Time of Hazard ID must be on or before Today. |
 | Lookup / configuration objects | Unique Name validations on several lookup/configuration objects. |
 
-## Current Approval and Assignment Logic
+#### Current Approval and Assignment Logic
 
 The baseline package does not show a formal workflow approval model for Quality Observation or Hazard ID. Assignment / accountability appears to be supported through fields and related components rather than workflow stages. Relevant fields include:
 
@@ -59,7 +59,7 @@ The baseline package does not show a formal workflow approval model for Quality 
 | Quality Observation | Observer, Observed, Employee Location, Observed Employee’s Location, Department, Action Plan, Task List, Follow Up, PAR/CAPA Required? |
 | Hazard ID | Incident Reporter, Reviewed By, Action Plan, Actions/Follow Up, Step Taken, Steps Taken, Reviewer Comments, Hazard ID Closed On |
 
-## Current UI Behavior
+#### Current UI Behavior
 
 The baseline package includes configurable views and tabs that expose Observations concepts separately within the Observations module. Key views include:
 
@@ -70,7 +70,7 @@ The baseline package includes configurable views and tabs that expose Observatio
 | Incident-Management Observation | EHSIncidentMang_Observation_Inventory and EHSIncidentMang_Observation_Detail views. |
 | Settings | Lookup-management views for Discussions, Task List, Step Taken, Severity, Follow Up, Comfort Level, Hazard Type, Specific Location, Observation Area, Topics Discussed. |
 
-## Current Data Model and Lookup Values
+#### Current Data Model and Lookup Values
 
 The current configuration includes several lookup sets that will require harmonization before enterprise rollout.
 
@@ -87,19 +87,19 @@ The current configuration includes several lookup sets that will require harmoni
 | Steps Taken | Change request, Individual training, Stop Work, Team training, Reward / recognition, PAR / NCR, Other, On the spot discussion |
 | Quota | Accepted, Rejected, Non Approved, Approved |
 
-## Reporting Support
+#### Reporting Support
 
 The package provides inventory views for Hazard ID, My Hazard IDs, Work Observation, My Work Observations, lookup objects, and incident-management observation views. No dedicated KPI dashboards, cross-process reports, or harmonized enterprise analytics were identified in the package.
 
-## Child Objects and Related Records
+#### Child Objects and Related Records
 
 The baseline includes references to Action Plan, Task List, Follow Up, Steps Taken, Topics Discussed, Discussions, and child/related records. The application supports related action tracking, but does not appear to enforce workflow closure dependency rules between Observations, NCRs, Incidents, or Near Misses.
 
-## Integrations
+#### Integrations
 
 No external integration behavior was identified in the baseline package. There are dependencies on other Intelex application areas, including Action Plans and EHS Incident Management, but no external API, HRIS, ERP, or data-warehouse integration configuration was identified in the uploaded package.
 
-# 3. Future-State Business Requirements Identified
+### 3. Future-State Business Requirements Identified
 
 | Requirement ID | Requirement / Need | Source Evidence | Explicit or Implied | Business Driver |
 |---|---|---|---|---|
@@ -111,7 +111,7 @@ No external integration behavior was identified in the baseline package. There a
 | REQ-016 | Ensure the future-state design supports safety, environmental, and security-related observations where appropriate. | Øyvind asked whether Hazard ID includes environment and security, and John stated Hazard ID has been used for those conditions unless severe enough to be near miss or incident. fileciteturn3file12 | Explicit | EHS scope clarity |
 | REQ-018 | Provide clear user-facing entry paths so frontline users do not need to understand back-end object complexity. | Stakeholders emphasized that workers need obvious paths such as Observations, Inspections, NCR, and Incidents; confusing navigation would hurt adoption. fileciteturn3file17 | Implied | Usability, adoption |
 
-# 4. Gap Analysis
+### 4. Gap Analysis
 
 The gaps below are limited to items that require an actual Intelex system, configuration, security, navigation, form, lookup, or reporting change in the Observations-related solution at this time. Process-only decisions, deferred items, licensing questions, and “do not build” recommendations have been removed from the gap table.
 
@@ -127,7 +127,7 @@ The gaps below are limited to items that require an actual Intelex system, confi
 | GAP-008 | Reporting separation and consolidated analytics | Current inventory views support list reporting but not clearly separated enterprise analytics. | Business needs HSE reporting that is separated from Quality reporting and aligned to the future Hazard ID model. | Current mixed Observations model risks confusing metrics, especially if Quality remains a Safe/Unsafe/Quality value. | Separate HSE hazard metrics from Quality observation/improvement metrics by retiring Quality from active Observations use, updating inventory views, and aligning reports to the approved Hazard ID taxonomy. | Reporting configuration; possible view/report updates. | Inventory views, dashboards, reports, lookup values. | High | Moderate |
 
 
-# 5. Open Questions & Follow-Ups
+### 5. Open Questions & Follow-Ups
 
 | ID | Open Question | Why It Matters | Recommended Owner |
 |---|---|---|---|
@@ -138,7 +138,7 @@ The gaps below are limited to items that require an actual Intelex system, confi
 | OQ-013 | Is “See It, Own It, Share It” a user-facing label to retain for Hazard ID? | NDT users may recognize this terminology better than “Hazard ID.” | HSE change-management lead |
 | OQ-014 | Are positive / safe observations or recognition records in scope for Hazard ID? | Transcript mentions possible safe/kudos observations but does not finalize how they should be captured. | HSE process owner |
 
-# 6. Recommended Next Steps
+### 6. Recommended Next Steps
 
 | Priority | Recommendation | Purpose |
 |---|---|---|
@@ -149,26 +149,26 @@ The gaps below are limited to items that require an actual Intelex system, confi
 | High | Perform security-role review. | Align Observations Admin/Supervisor/Reporter roles with future HSE and Quality ownership. |
 | Medium | Develop user-facing guidance and intake labels. | Reduce misclassification and improve adoption for frontline workers. |
 
-# 7. Assumptions, Risks & Constraints
+### 7. Assumptions, Risks & Constraints
 
-## Assumptions
+#### Assumptions
 
 - The uploaded `.ipack` package represents the baseline current-state Observations configuration.
 - No formal workflow exists on the parsed Quality Observation, Hazard ID, or Observation objects because no `PublishWorkflowId` was present for those objects in the package.
 - The future-state direction is not fully finalized but strongly favors moving quality-related observations into NCR and retaining Hazard ID as the remaining Observations concept.
 - Historical records exist in the current Observations application; therefore, lookup changes should avoid deletion or careless recaptioning.
 
-## Risks
+#### Risks
 
 - **Classification risk:** Users may continue misclassifying quality issues, hazards, near misses, incidents, findings, and improvement opportunities if definitions are not embedded in forms and training.
 - **Historical reporting risk:** Recaptioning existing lookup values could alter the meaning of prior records.
 - **Adoption risk:** If HSE and Quality navigation is not intuitive, frontline users may select the wrong entry path or avoid reporting.
 
-## Constraints
+#### Constraints
 
 - Existing data in Observations constrains lookup deletion and recaptioning.
 
-## Inferred Analysis
+#### Inferred Analysis
 
 - The most sustainable architecture is to treat Observations as an HSE Hazard ID / proactive condition-reporting capability and treat Quality Observation as a legacy / transitional construct.
 - Hazard ID should remain lightweight and action-oriented, with clear escalation/reference guidance rather than heavy conversion automation.

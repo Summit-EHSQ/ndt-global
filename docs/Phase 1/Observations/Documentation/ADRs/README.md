@@ -1,14 +1,14 @@
-# Observations Application ADRs
+## Observations Application ADRs
 
 Source transcript: `NDT call 05.29.docx`  
 Meeting date: 2026-05-29  
 Scope: Observations / Hazard ID future-state design
 
-## Overview
+### Overview
 
 This folder contains separate Markdown Architectural Decision Records (ADRs) for the Observations / Hazard ID future-state design discussion. Each ADR is stored as an individual Markdown file with YAML front matter for easier reuse in a GitHub monorepo.
 
-## ADR Map
+### ADR Map
 
 | ADR | Title | File | Decision Captured |
 |---:|---|---|---|
@@ -20,7 +20,7 @@ This folder contains separate Markdown Architectural Decision Records (ADRs) for
 | ADR-006 | Handle Cross-Domain HSE/Quality Cases as Separate but Related Records | [`adr-006-handle-cross-domain-hse-quality-cases-as-separate-but-related-records.md`](./adr-006-handle-cross-domain-hse-quality-cases-as-separate-but-related-records.md) | Capture the decision that mixed HSE/Quality cases should remain separate records with a practical association path, rather than being tightly integrated by default. |
 | ADR-007 | Do Not Implement Automatic Conversion from Hazard ID to Incident | [`adr-007-do-not-implement-automatic-conversion-from-hazard-id-to-incident.md`](./adr-007-do-not-implement-automatic-conversion-from-hazard-id-to-incident.md) | Capture the decision not to build automated Hazard ID-to-Incident conversion logic because clear definitions and reviewer judgment are preferred for low-frequency edge cases. |
 
-## Notes
+### Notes
 
 - ADR statuses reflect the meeting outcome and should be updated as decisions are finalized or superseded.
 - Quality-side NCR/CAPA decisions are intentionally excluded from this Observations ADR set unless they directly affect Observations / Hazard ID architecture.

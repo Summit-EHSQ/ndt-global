@@ -1,4 +1,4 @@
-# TASK-OBS-011: Redesign Observations Security Groups for HSE Ownership Model
+## TASK-OBS-011: Redesign Observations Security Groups for HSE Ownership Model
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Security, Roles, and Permissions |
 | Task Number | TASK-OBS-011 |
 
-## Task Name
+### Task Name
 
 Redesign Observations Security Groups for HSE Ownership Model
 
-## Task Description
+### Task Description
 
 Update Observations security so access aligns to HSE Hazard ID ownership and no longer grants broad mixed Quality/HSE access by default. Existing Observations security groups should be reused where practical but revised to support the future HSE ownership model.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Review current permissions assigned to `Observations Admin`, `Observations Supervisor`, and `Observations Reporter`.
 - Define future HSE roles such as HSE Hazard Reporter, HSE Hazard Supervisor / Reviewer, and HSE Observations Admin.
@@ -26,7 +26,7 @@ Update Observations security so access aligns to HSE Hazard ID ownership and no 
 - Align module tab and view visibility with the selected navigation model.
 - Document any users/groups that require migration from old Observations groups to new or revised HSE groups.
 
-## Unit Tests
+### Unit Tests
 
 - Log in as HSE Reporter and confirm the user can create Hazard ID records.
 - Confirm HSE Reporter cannot create Quality Observation records.
@@ -36,14 +36,14 @@ Update Observations security so access aligns to HSE Hazard ID ownership and no 
 - Log in as Observations Admin and confirm admin can access required support/configuration views.
 - Confirm hidden navigation links are not accessible through direct URL for unauthorized roles.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 GAP-007; REQ-007; Updated workflow requirement
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Security Groups / Roles / View Permissions / Object Permissions / Workflow Permissions
 
-## Dependencies / Sequencing Notes
+### Dependencies / Sequencing Notes
 
 Depends on decisions for Quality retirement, Hazard ID navigation placement, and final `HSE Manager` role membership. Must be completed before UAT.

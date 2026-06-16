@@ -1,4 +1,4 @@
-# TASK-OBS-020: Configure Hazard ID Workflow Due Date Reminder and Escalation Notifications
+## TASK-OBS-020: Configure Hazard ID Workflow Due Date Reminder and Escalation Notifications
 
 | Field | Value |
 |---|---|
@@ -6,15 +6,15 @@
 | Theme | Notifications and Email Templates |
 | Task Number | TASK-OBS-020 |
 
-## Task Name
+### Task Name
 
 Configure Hazard ID Workflow Due Date Reminder and Escalation Notifications
 
-## Task Description
+### Task Description
 
 Configure automated email notifications for Hazard ID workflow due dates and overdue escalation. For each active workflow stage, the responsible user should receive reminder notifications one day before the due date and on the due date. If the record becomes overdue, the responsible user should receive an overdue-specific reminder one day after the due date and every other day after that until the record is closed. If the record reaches three days overdue, the responsible user’s immediate supervisor should receive an escalation notification at the three-day overdue mark and every other day thereafter until the record is closed.
 
-## Specific Technical Changes Required
+### Specific Technical Changes Required
 
 - Create or update Hazard ID workflow email templates for pre-due reminder, due-today reminder, overdue responsible-user reminder, and supervisor escalation.
 - Configure notification logic for each active Hazard ID workflow stage: `Draft` and `Review`.
@@ -36,7 +36,7 @@ Configure automated email notifications for Hazard ID workflow due dates and ove
 - Ensure notifications do not send for Closed Hazard ID records.
 - Document notification schedules, recipients, templates, and stop conditions.
 
-## Unit Tests
+### Unit Tests
 
 - Create a Draft-stage Hazard ID with a due date two days in the future and confirm no reminder is sent yet.
 - Adjust or simulate the due date to one day before due date and confirm the responsible user receives the pre-due reminder.
@@ -54,14 +54,14 @@ Configure automated email notifications for Hazard ID workflow due dates and ove
 - Confirm email content includes the record link, stage, due date, and overdue language where applicable.
 - Confirm escalation email is sent to the correct immediate supervisor based on the approved supervisor source.
 
-## Source Gap / Requirement Reference
+### Source Gap / Requirement Reference
 
 Updated user workflow notification requirement
 
-## Configuration Impact Area
+### Configuration Impact Area
 
 Notifications / Email Templates / Workflow Due Dates / Escalations / Employee Hierarchy / Security
 
-## Dependencies / Sequencing Notes
+### Dependencies / Sequencing Notes
 
 Depends on `TASK-OBS-017`, `TASK-OBS-018`, and `TASK-OBS-019` because workflow stages, due dates, responsible-party assignment, and closure conditions must exist before reminder and escalation logic can be configured. Also depends on confirmation of the source field for the responsible user’s immediate supervisor. If Review responsibility remains role-based rather than user-based, escalation logic must be confirmed before build.

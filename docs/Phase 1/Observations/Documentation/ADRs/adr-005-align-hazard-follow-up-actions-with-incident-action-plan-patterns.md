@@ -16,15 +16,15 @@ informed:
   - Branka Vidovic
 ---
 
-# ADR-005: Align Hazard Follow-Up Actions with Incident Action Plan Patterns
+## ADR-005: Align Hazard Follow-Up Actions with Incident Action Plan Patterns
 
-## Context and Problem Statement
+### Context and Problem Statement
 
 The current Hazard ID action plan model differs from the Incident Management action plan model. NDT requested consistency with the Incident Management approach, especially for how actions are created, assigned, and managed.
 
 The discussion distinguished between submitter-provided immediate action information and reviewer-assigned formal follow-up actions.
 
-## Decision Drivers
+### Decision Drivers
 
 - Users benefit from consistent action plan fields and layout across HSE processes.
 - HSE managers need control over who owns corrective actions and due dates.
@@ -32,7 +32,7 @@ The discussion distinguished between submitter-provided immediate action informa
 - The action model should avoid records sitting in the system without ownership.
 - The design should remain consistent with Incident Management where practical.
 
-## Considered Options
+### Considered Options
 
 1. **Keep the current Hazard ID action plan configuration**
    - Avoids configuration change.
@@ -47,18 +47,18 @@ The discussion distinguished between submitter-provided immediate action informa
    - Aligns with Incident Management.
    - Requires workflow and form updates.
 
-## Decision Outcome
+### Decision Outcome
 
 Align Hazard ID follow-up actions with the Incident Management action plan pattern where practical. Submitters may capture what was observed and any immediate steps taken, but formal follow-up actions should be reviewed and assigned by the responsible HSE manager during the review workflow.
 
-## Consequences
+### Consequences
 
 - Hazard ID forms and action grids may require configuration changes.
 - The HSE manager review step becomes central to action assignment.
 - The user experience should distinguish between immediate action taken and assigned follow-up action.
 - Reporting on actions should become more consistent across HSE processes.
 
-## More Information
+### More Information
 
 The group discussed that most hazards may only require one action, but NDT’s process expects HSE review before formal action assignment.
 
